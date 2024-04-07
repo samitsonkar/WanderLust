@@ -25,6 +25,9 @@ async function main() {
 main().then(() => console.log("db connected"))
 .catch(err => console.log("db not connected"))
 
+app.get("/", (req,res) => {
+    res.redirect("./listings");
+})
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
