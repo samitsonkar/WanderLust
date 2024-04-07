@@ -12,7 +12,7 @@
       />
       <div class="card-body">
         <p class="card-text">
-          Owned by <b><i><%= listing.owner.username %></i></b>
+          Owned by <b><i><%= listing.owner.username.toUpperCase() %></i></b>
         </p>
         <p class="card-text"><%= listing.description %></p>
         <p class="card-text">
@@ -114,9 +114,7 @@
         <% for(review of listing.reviews) { %>
         <div class="card col-5 mb-3 ms-3">
           <div class="card-body">
-            <h5 class="class-title">
-              @ <%= review.author.username.toUpperCase() %>
-            </h5>
+            <h5 class="class-title">@ <%= review.author.username %></h5>
             <p
               class="starability-result card-text"
               data-rating="<%"
